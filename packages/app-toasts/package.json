@@ -1,0 +1,29 @@
+{
+  "name": "app-toasts",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Dan Reeves <hey@danreev.es>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/app-toasts.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "app-module-registery": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-dynamic-modules": "^5.2.3",
+    "redux-saga": "^1.1.3"
+  }
+}
