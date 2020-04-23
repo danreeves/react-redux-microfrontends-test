@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Publish
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -17,11 +17,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    - name: action-lerna
-      uses: m19c/action-lerna@1.0.0
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      uses: actions/checkout@v2
+      uses: actions/setup-node@v1
       env:
-        - TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-      args: "publish from-package --yes --registry https://registry.npmjs.org/:_authToken=$TOKEN"
+        TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+      steps:
+        run: "npm i -g lerna"
+        run: "lerna publish from-package --yes --registry https://registry.npmjs.org/:_authToken=$TOKEN"
