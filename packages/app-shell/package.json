@@ -1,6 +1,6 @@
 {
   "name": "app-shell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The root of the application",
   "author": "Dan Reeves <hey@danreev.es>",
   "homepage": "",
@@ -31,10 +31,10 @@
     "webpack-plugin-serve": "^0.12.1"
   },
   "dependencies": {
-    "app-module-registery": "^1.0.0",
-    "app-notification-history": "^1.0.0",
-    "app-posts": "^1.0.0",
-    "app-toasts": "^1.0.0",
+    "app-module-registery": "^1.0.1",
+    "app-notification-history": "^1.0.1",
+    "app-posts": "^1.0.1",
+    "app-toasts": "^1.0.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
