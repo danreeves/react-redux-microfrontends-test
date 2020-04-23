@@ -1,6 +1,6 @@
 {
   "name": "@danreeves/app-notification-history",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "Dan Reeves <hey@danreev.es>",
@@ -17,8 +17,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@danreeves/app-module-registery": "^1.0.2",
-    "@danreeves/app-toasts": "^1.0.2"
+    "@danreeves/app-module-registery": "^1.0.3",
+    "@danreeves/app-toasts": "^1.0.3"
   },
   "gitHead": "ee7fe1bbecbafcb800bcefcf23f4af0e92a6743c",
   "repository": "git@github.com:danreeves/react-redux-microfrontends-test.git"
