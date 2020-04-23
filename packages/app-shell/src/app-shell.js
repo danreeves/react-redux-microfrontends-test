@@ -9,9 +9,9 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import { ModuleRegisterProvider } from 'app-module-registery'
-import { Toasts, addToast } from 'app-toasts'
-import {NotificationHistory, module as notificationHistoryModule} from 'app-notification-history'
+import { ModuleRegisterProvider } from '@danreeves/app-module-registery'
+import { Toasts, addToast } from '@danreeves/app-toasts'
+import {NotificationHistory, module as notificationHistoryModule} from '@danreeves/app-notification-history'
 
 const store = createStore(
   {
@@ -23,7 +23,7 @@ const store = createStore(
 
 store.subscribe(() => console.log('[Store]', store.getState()))
 
-const Posts = lazy(() => import('app-posts'))
+const Posts = lazy(() => import('@danreeves/app-posts'))
 
 function App () {
   return <Provider store={store}>

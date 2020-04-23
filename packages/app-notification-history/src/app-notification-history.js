@@ -8,8 +8,8 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 import { call, put } from "redux-saga/effects";
-import { useAddModule } from "app-module-registery";
-import { actionTypes } from "app-toasts";
+import { useAddModule } from "@danreeves/app-module-registery";
+import { actionTypes } from "@danreeves/app-toasts";
 
 const id = "app/notification-history";
 

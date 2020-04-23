@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { takeEvery, call, put, all } from "redux-saga/effects";
-import { useAddModule } from "app-module-registery";
+import { useAddModule } from "@danreeves/app-module-registery";
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

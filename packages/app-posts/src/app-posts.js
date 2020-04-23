@@ -8,8 +8,8 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 import { call, put } from "redux-saga/effects";
-import { useAddModule } from "app-module-registery";
-import { addToast } from "app-toasts";
+import { useAddModule } from "@danreeves/app-module-registery";
+import { addToast } from "@danreeves/app-toasts";
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
