@@ -20,5 +20,6 @@
     "@danreeves/app-module-registery": "^1.0.2",
     "@danreeves/app-toasts": "^1.0.2"
   },
-  "gitHead": "bc7ed5c9b9bbbf827435776abf220aef376d469c"
+  "gitHead": "ee7fe1bbecbafcb800bcefcf23f4af0e92a6743c",
+  "repository": "git@github.com:danreeves/react-redux-microfrontends-test.git"
 }
