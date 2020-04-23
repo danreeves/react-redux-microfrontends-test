@@ -23,5 +23,5 @@ jobs:
     - name: action-lerna
       uses: m19c/action-lerna@1.0.0
       env:
-        TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        - TOKEN: ${{ secrets.PUBLISH_TOKEN }}
       args: "publish from-package --yes --registry https://registry.npmjs.org/:_authToken=$TOKEN"
