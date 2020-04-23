@@ -1,6 +1,6 @@
 {
   "name": "@danreeves/app-toasts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "Dan Reeves <hey@danreev.es>",
   "homepage": "",
@@ -17,7 +17,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@danreeves/app-module-registery": "^1.0.1",
+    "@danreeves/app-module-registery": "^1.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
