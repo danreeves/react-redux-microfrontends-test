@@ -28,9 +28,9 @@ function App() {
     <Provider store={store}>
       <ModuleRegisterProvider>
         <Router>
-          <div>
+          <div style={{ fontFamily: "monospace" }}>
             <header>
-              <h1>Hello world!</h1>
+              <h1>hello world!</h1>
               <nav>
                 <Link to="/">Home</Link>
                 <Link to="/posts">Posts</Link>
