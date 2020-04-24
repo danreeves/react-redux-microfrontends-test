@@ -22,6 +22,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    needs: publish
+
     env:
       NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
 
