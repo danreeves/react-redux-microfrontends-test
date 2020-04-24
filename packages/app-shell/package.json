@@ -1,6 +1,6 @@
 {
   "name": "@danreeves/app-shell",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The root of the application",
   "author": "Dan Reeves <hey@danreev.es>",
   "homepage": "",
@@ -29,9 +29,9 @@
   },
   "dependencies": {
     "@danreeves/app-module-registery": "^1.0.3",
-    "@danreeves/app-notification-history": "^1.0.3",
-    "@danreeves/app-posts": "^1.0.3",
-    "@danreeves/app-toasts": "^1.0.3",
+    "@danreeves/app-notification-history": "^1.0.4",
+    "@danreeves/app-posts": "^1.0.4",
+    "@danreeves/app-toasts": "^1.0.4",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

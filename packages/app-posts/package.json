@@ -1,6 +1,6 @@
 {
   "name": "@danreeves/app-posts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "Dan Reeves <hey@danreev.es>",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@danreeves/app-module-registery": "^1.0.3",
-    "@danreeves/app-toasts": "^1.0.3",
+    "@danreeves/app-toasts": "^1.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
