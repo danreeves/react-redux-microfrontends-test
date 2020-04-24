@@ -1,57 +1,68 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { WebpackPluginServe: Serve } = require("webpack-plugin-serve");
+const argv = require("webpack-nano/argv");
 
-const outputPath = path.resolve('./dist');;
+const { prod } = argv;
+
+const outputPath = path.resolve("./dist");
 const serverOptions = {
   historyFallback: true,
   hmr: false,
   liveReload: true,
   port: 3000,
   static: [outputPath],
-}
+};
+
+const entry = [
+  "./src/app-shell.js",
+  !prod && "webpack-plugin-serve/client", // ← important: this is required, where the magic happens in the browser
+].filter(Boolean);
+
+const plugins = [
+  new HtmlWebpackPlugin(),
+  !prod && new Serve(serverOptions),
+].filter(Boolean);
 
 module.exports = {
-  entry: [
-    './src/app-shell.js',
-    'webpack-plugin-serve/client' // ← important: this is required, where the magic happens in the browser
-  ],
+  entry,
   output: {
-    filename: 'app-shell.js',
+    filename: "app-shell.js",
     path: outputPath,
     publicPath: "/",
-    chunkFilename: '[name].[hash].bundle.js',
+    chunkFilename: "[name].[hash].bundle.js",
   },
-  plugins: [
-    new HtmlWebpackPlugin(),
-    new Serve(serverOptions)
-  ],
+  plugins,
   module: {
     rules: [
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [['@babel/preset-env',
-              {
-                targets: {
-                  esmodules: true,
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  targets: {
+                    esmodules: true,
+                  },
                 },
-              },
-            ], '@babel/preset-react']
-          }
-        }
-      }
-    ]
+              ],
+              "@babel/preset-react",
+            ],
+          },
+        },
+      },
+    ],
   },
   optimization: {
     splitChunks: {
-      chunks: 'all',
-      name: true
-    }
+      chunks: "all",
+      name: true,
+    },
   },
-  mode: 'development',
-  watch: true  // ← important: webpack and the server will continue to run in watch mode
+  mode: prod ? "production" : "development",
+  watch: !prod,
 };

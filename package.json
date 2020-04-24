@@ -1,6 +1,10 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "clean": "find ./packages/**/dist  -type d -exec rm -rf {} +",
+    "build": "lerna run build --stream"
+  },
   "devDependencies": {
     "lerna": "^3.20.2"
   }

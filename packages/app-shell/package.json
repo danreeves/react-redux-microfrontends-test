@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "start": "wp",
+    "build": "wp build --prod",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {

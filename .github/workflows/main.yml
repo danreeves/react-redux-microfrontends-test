@@ -1,11 +1,11 @@
-name: Publish
+name: CI
 
 on:
   push:
     branches: [ master ]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     env:
@@ -18,3 +18,23 @@ jobs:
           scope: "@danreeves"
       - run: "npm i -g lerna"
       - run: "lerna publish from-package --yes --no-verify-access"
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm i -g lerna
+      - run: lerna bootstrap
+      - run: npm run clean
+      - run: npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: packages/app-shell/dist
