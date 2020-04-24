@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "clean": "find ./packages/**/dist  -type d -exec rm -rf {} +",
+    "clean": "find ./packages/**/dist  -type d -exec rm -rf {} + || true",
     "build": "lerna run build --stream"
   },
   "devDependencies": {
