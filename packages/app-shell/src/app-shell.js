@@ -32,8 +32,7 @@ function App() {
             <header>
               <h1>hello world!</h1>
               <nav>
-                <Link to="/">Home</Link>
-                <Link to="/posts">Posts</Link>
+                <Link to="/">Home</Link> <Link to="/posts">Posts</Link>{" "}
                 <Link to="/notifications">Notifications</Link>
               </nav>
             </header>
