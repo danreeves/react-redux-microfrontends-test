@@ -29,7 +29,7 @@ module.exports = {
   output: {
     filename: "app-shell.js",
     path: outputPath,
-    publicPath: "/",
+    publicPath: prod ? "/react-redux-microfrontends-test/" : "/",
     chunkFilename: "[name].[hash].bundle.js",
   },
   plugins,
