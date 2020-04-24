@@ -76,7 +76,7 @@ function Toasts() {
           <li
             key={i}
             style={{
-              border: "2px solid green",
+              border: "2px solid dodgerblue",
               padding: "15px",
               marginRight: "10px",
               marginBottom: "5px",
