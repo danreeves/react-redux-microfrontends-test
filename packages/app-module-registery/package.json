@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.13.1"
   },
   "gitHead": "ee7fe1bbecbafcb800bcefcf23f4af0e92a6743c",

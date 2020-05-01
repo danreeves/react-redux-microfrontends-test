@@ -30,7 +30,7 @@ export function ModuleRegisterProvider({ children }) {
 }
 
 export function useAddModule(module) {
-  const { addModule, modules } = useContext(ModuleRegisterContext);
+  const { addModule } = useContext(ModuleRegisterContext);
   useEffect(() => {
     addModule(module);
   }, []);

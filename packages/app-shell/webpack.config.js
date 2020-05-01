@@ -37,7 +37,7 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules\/(?!(@danreeves)\/).*/,
         use: {
           loader: "babel-loader",
           options: {

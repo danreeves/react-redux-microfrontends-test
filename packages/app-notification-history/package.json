@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@danreeves/app-module-registery": "^1.0.3",
     "@danreeves/app-toasts": "^1.0.4"
   },
